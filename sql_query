@@ -1,0 +1,20 @@
+##
+CREATE TABLE employees (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(256),
+    designation VARCHAR(256),
+    dob DATE,
+    PRIMARY KEY (id)
+);
+INSERT INTO employees(name, designation, dob ) VALUES ('JOHN', 'Engineer', '1996-01-18');
+INSERT INTO employees(name, designation, dob ) VALUES ('PETER', 'VP', '1989-05-28');
+INSERT INTO employees(name, designation, dob ) VALUES ('JESSICA', 'CIO', '1979-05-28');
+INSERT INTO employees(name, designation, dob ) VALUES ('JOHN', 'Engineer', '1996-01-18');
+INSERT INTO employees(name, designation, dob ) VALUES ('PETER', 'VP', '1989-05-28');
+
+##
+WHERE   → filter rows
+GROUP BY → make groups
+HAVING  → filter groups
+
+## Adding column with a default value
