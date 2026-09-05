@@ -18,3 +18,20 @@ GROUP BY → make groups
 HAVING  → filter groups
 
 ## Adding column with a default value
+alter table employees
+ADD column salary INT
+
+alter table employees
+ADD column EMPLOYEE_CODE BIGINT DEFAULT 0
+
+UPDATE employees
+set salary=CASE when
+id=1 THEN 2
+when id=2 THEN 1
+when id=3 THEN 1.5
+when id=4 THEN 2
+when id=5 THEN 1
+END
+where id IN (1,2,3,4,5)
+
+
